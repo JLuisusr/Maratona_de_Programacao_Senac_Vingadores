@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canal de Denúncias</title>
+    <link rel="stylesheet" href="m-formulario.css">
+</head>
+<body>
+    <main class="container">
+        <h1 class="titulo-1">Denunciar um incidente de forma confidencial</h1>
+        <h2 class="titulo-2">Sua segurança e privacidade são nossas principais prioridades. Todas as denúncias são confidenciais e serão tratadas com cuidado. Você pode optar por permanecer anônimo.</h2>
+        <div class="m-formulario">
+            <form action="#" method="post"></form>
+            <p> Classifique o nível do seu problema</p>
+            <select name="selecione1" id="escolha1">
+                <option value="Selecione1" selected="selectec">Primeira vez</option>
+                <option value="opcao1">Todos os dias</option>
+                <option value="opcao2">Semanalmente</option>
+                <option value="opcao3">Mensalmente</option>
+                <option value="opcao4">Anualmente</option>
+            </select>
+
+            <br></br>
+
+            <p>Problemas recorrentes</p>
+            <select name="selecione2" id="escolha2">
+                <option value="selecione2" selected="selectec">Selecione seu problema</option>
+                <option value="opcao7">Malware</option>
+                <option value="opcao8">Vazamento de dados</option>
+                <option value="opcao9">Falta de atualização de software</option>
+                <option value="opcao10">Senhas fracas ou comprometidas</option>
+                <option value="opcao11">Vunerabilidade humana</option>
+            </select>
+
+            <br></br>
+
+            <p>Descreva melhor seu problema:</p>
+            <label for="text" id="texto-denuncia"></label>
+            <textarea name="mensagem" id="caixa-mensagem"></textarea>
+
+            <br></br>
+            
+            <button id="botao" type="submit">Enviar</button>
+
+            <br></br>
+
+            <p>Ao enviar este formulário, você reconhece que essas informações serão revisadas por nossa equipe de segurança.</p>
+        </div>
+        
+        <div>
+            <button id="botao-voltar"  type="submit">Voltar</button>
+            
+            <button id="botao-anvançar"  type="submit">Avançar</button>
+            
+        </div>
+
+        <div class="contato">
+            <p>Precisa de ajuda imediata?</p>
+            <p>Ligue para: (xx) xxxx-xxxx</p>
+            <P> Envie um e-mail: xxxxx@gmail.com</P>
+        </div>
+    </main>
+</body>
+</html>
+
