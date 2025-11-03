@@ -81,12 +81,59 @@ header{
 
 main{height: 83vh;}
 
-#materiais{
+#materias{
     display: grid;
+    grid-template-columns: repeat(3,1fr);
     gap: 20px 20px;
+    margin: auto;
+    margin-top: 20px;
+    width: min(83vh, 1200px);
 }
 
-article *{
-    height: 300px;
-    width: 600px;
+.materia_blog{
+    height: 400px;
+    overflow: hidden;
+    border-radius: 30px;
+    background-color: white;
+    border: 1px solid #aecceb ;
+    text-align: center;
+
+}
+
+.materia_blog img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* preenche sem distorcer */
+    object-position: center;
+}
+.materia_blog h2{
+    margin: 0;
+    font-size: .98rem;
+    font-weight: 600;
+    display: -webkit-box; /* Para que serve esse comando? */
+    -webkit-line-clamp: 2;  /* Limita para 2 linhas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.6rem; /* Vai garantir uma altura estável entre os cards */
+}
+
+.materia_blog p{
+    margin: 0;
+    font-size: .88rem;
+    font-weight: 400;
+    display: -webkit-box; /* Para que serve esse comando? */
+    -webkit-line-clamp: 2;  /* Limita para 2 linhas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.6rem; /* Vai garantir uma altura estável entre os cards */
+}
+
+.tag{
+    font-size: .75rem;
+    font-weight: 700;
+    padding: .25rem .5rem;
+    border-radius: 999px;
+    color: #0b1220;
+    background: #e2e8f0;
+    border: 1px solid #cbd5e1;
 }
