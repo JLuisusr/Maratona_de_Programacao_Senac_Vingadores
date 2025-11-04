@@ -21,13 +21,13 @@
 }
 
 /* --- Reset e Estilos Globais --- */
-* {
+.geral * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+.geral body {
     font-family: 'Inter', sans-serif;
     background-color: var(--cor-fundo-pagina);
     color: var(--cor-texto-escuro);
@@ -36,32 +36,32 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3 {
+.geral h1, h2, h3 {
     line-height: 1.3;
     font-weight: 700;
     color: var(--cor-azul-principal);
 }
 
-p {
+.geral p {
     color: var(--cor-texto-claro);
     margin-bottom: 16px;
 }
 
-a {
+.geral a {
     color: var(--cor-texto-claro);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-a:hover {
+.geral a:hover {
     color: var(--cor-azul-principal);
 }
 
-ul {
+.geral ul {
     list-style: none;
 }
 
-img {
+.geral img {
     max-width: 100%;
     display: block;
 }
