@@ -1,0 +1,278 @@
+/* --- Importação da Fonte --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap' );
+
+/* --- Variáveis de Cores --- */
+:root {
+    --cor-azul-principal: #3A7CA5;
+    --cor-texto-escuro: #212529;
+    --cor-texto-claro: #5a6168;
+    --cor-fundo-pagina: #F8F9FA;
+    --cor-fundo-cartao: #FFFFFF;
+    --cor-borda: #E9ECEF;
+    --cor-incone: #81C784;
+    --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Reset e Estilos Globais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--cor-fundo-pagina);
+    color: var(--cor-texto-escuro);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+    line-height: 1.3;
+    font-weight: 700;
+    color: var(--cor-azul-principal);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.25rem; }
+
+p {
+    color: var(--cor-texto-claro);
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--cor-azul-principal);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--cor-texto-escuro);
+}
+
+ul {
+    list-style: none;
+}
+
+.conteudo-central {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --- Cabeçalho --- */
+.cabecalho-site .conteudo-central {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--cor-azul-principal);
+}
+
+.logo-texto {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--cor-texto-escuro);
+}
+
+.navegacao-principal ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navegacao-principal a {
+    font-weight: 600;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.navegacao-principal a.ativo,
+.navegacao-principal a:hover {
+    color: var(--cor-texto-escuro);
+    border-bottom-color: var(--cor-azul-principal);
+}
+
+/* --- Conteúdo Principal da Página "Sobre" --- */
+.pagina-sobre {
+    padding: 2rem 0;
+}
+
+.secao-apresentacao {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.secao-apresentacao h1 {
+    margin-bottom: 1rem;
+}
+
+.secao-apresentacao .subtitulo {
+    font-size: 1.1rem;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* --- Estilo Reutilizável para Cartões de Conteúdo --- */
+.cartao-conteudo {
+    background-color: var(--cor-fundo-cartao);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--sombra-suave);
+}
+
+.cartao-conteudo h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* --- Seção de Valores --- */
+.secao-valores .titulo-secao {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.grade-valores {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.cartao-valor {
+    text-align: center;
+}
+
+.cartao-valor h3 {
+    margin: 1rem 0 0.5rem;
+}
+
+.icone-valor {
+    color: var(--cor-incone);
+    margin: 0 auto;
+}
+
+/* --- Seção da Equipe --- */
+.secao-equipe .titulo-secao {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.container-foto-equipe {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.container-foto-equipe img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--sombra-suave);
+    display: block;
+}
+
+.legenda-equipe {
+    font-size: 1rem;
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--cor-texto-claro);
+}
+
+/* --- Seção "O Que Oferecemos" --- */
+.item-oferta {
+    margin-bottom: 1.5rem;
+}
+
+.item-oferta:last-child {
+    margin-bottom: 0;
+}
+
+.item-oferta h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Seção de Contato --- */
+.secao-contato p {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Rodapé --- */
+.rodape-site {
+    background-color: var(--cor-fundo-cartao);
+    border-top: 1px solid var(--cor-borda);
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+.rodape-site .conteudo-central {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.direitos-autorais {
+    color: var(--cor-texto-claro);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.navegacao-rodape ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.navegacao-rodape a {
+    font-size: 0.9rem;
+}
+
+
+@media (max-width: 992px) {
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    .cartao-conteudo { padding: 2rem; }
+}
+
+/* --- Telas de Celular (até 768px) --- */
+@media (max-width: 768px) {
+    .cabecalho-site .conteudo-central {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .navegacao-principal ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+
+    .grade-valores {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape-site .conteudo-central {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .navegacao-rodape ul {
+        justify-content: center;
+    }
+}
