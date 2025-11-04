@@ -1,0 +1,128 @@
+/* --- Estrutura da Página de Feed --- */
+.pagina-feed {
+    /* Garante o espaçamento correto abaixo do cabeçalho fixo */
+    margin-top: 85px;
+}
+
+/* Cabeçalho da página (título e subtítulo) */
+.secao-apresentacao-feed {
+    text-align: center;
+    padding: 32px 0;
+}
+
+.secao-apresentacao-feed h1 {
+    margin-bottom: 16px;
+}
+
+.secao-apresentacao-feed .subtitulo {
+    font-size: 18px;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* --- Grade de Postagens --- */
+.grade-postagens {
+    display: grid;
+    /* Cria uma grade responsiva: o navegador ajusta o número de colunas
+       com base no espaço disponível, com cada coluna tendo no mínimo 320px. */
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px; /* Espaçamento entre os cartões */
+    padding-bottom: 32px;
+}
+
+/* --- Estilo do Card de Postagem Individual --- */
+.cartao-postagem {
+    background-color: var(--cor-fundo-cartao);
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+    box-shadow: var(--sombra-suave);
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo do card na vertical */
+    overflow: hidden; /* Garante que a imagem não vaze dos cantos arredondados */
+}
+
+/* Cabeçalho do card (autor e opções) */
+.cabecalho-postagem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+.autor-postagem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nome-autor {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--cor-texto-escuro);
+}
+
+/* Mídia (imagem) do post */
+.midia-postagem img {
+    width: 100%;
+    height: 220px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Cobre a área sem distorcer a imagem */
+    display: block;
+}
+
+/* Conteúdo (texto) do post */
+.conteudo-postagem {
+    padding: 16px;
+    /* Garante que o texto ocupe o espaço restante em cards sem imagem */
+    flex-grow: 1; 
+}
+
+.conteudo-postagem p {
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+/* Rodapé do card (interações) */
+.rodape-postagem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-top: 1px solid var(--cor-borda);
+    font-size: 14px;
+    color: var(--cor-texto-claro);
+}
+
+.interacoes {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* Espaço entre curtidas e comentários */
+}
+
+.interacoes span {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* Espaço entre o ícone e o número */
+}
+
+/* --- Estilos dos Ícones (Placeholders) --- */
+/* Você pode substituir isso por SVGs ou uma biblioteca de ícones */
+.icone-rede-social,
+.icone-opcoes,
+.icone-interacao {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--cor-borda); /* Cor de placeholder */
+    border-radius: 4px;
+}
+
+.icone-rede-social {
+    border-radius: 50%; /* Ícone de rede social redondo */
+}
+
+.icone-interacao {
+    background-color: transparent;
+    border: 2px solid var(--cor-texto-claro);
+    width: 18px;
+    height: 18px;
+}

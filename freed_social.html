@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed da Comunidade - CONECXÃO SEGURA</title>
+    <link rel="stylesheet" href="sobre.css"> <!-- Link para o CSS do header, footer e definições gerais -->
+    <link rel="stylesheet" href="feed.css">   <!-- Link para o CSS específico do feed -->
+</head>
+<body>
+
+    <header class="cabecalho-site">
+        <div class="conteudo-central">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                </svg>
+                <span class="logo-texto">CONECXÃO SEGURA</span>
+            </div>
+
+            <div class="navegacao-e-perfil">
+                <nav class="navegacao-principal">
+                    <ul>
+                        <li><a href="conexão.html">Home</a></li>
+                        <li><a href="quiz.html">Quiz</a></li>
+                        <li><a href="feed.html" class="ativo">Feed Social</a></li> <!-- Link Ativo -->
+                        <li><a href="index.html">Educação</a></li>
+                        <li><a href="m-formulario.html">Reportar</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                    </ul>
+                </nav>
+
+                <div class="container-perfil">
+                    <img src="imagen/professor.jpeg" alt="Abrir menu do perfil" class="avatar-cabecalho">
+                    
+                    <div class="menu-suspenso-perfil">
+                        <div class="cabecalho-menu">
+                            <img src="imagen/professor.jpeg" alt="Foto de perfil do usuário" class="avatar-menu">
+                            <div class="info-usuario">
+                                <strong>Nome do Usuário</strong>
+                                <span>usuario@gmail.com</span>
+                            </div>
+                        </div>
+                        <hr class="divisor-menu">
+                        <ul>
+                            <li><a href="#">Meu Perfil</a></li>
+                            <li><a href="#">Minhas Postagens</a></li>
+                            <li><a href="#">Meus Comentários</a></li>
+                            <li><a href="#">Configurações</a></li>
+                            <li><a href="#" class="link-sair">Sair</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pagina-feed">
+        <div class="conteudo-central">
+
+            <!-- Cabeçalho da Página de Feed -->
+            <section class="secao-apresentacao-feed">
+                <h1>Feed da Comunidade</h1>
+                <p class="subtitulo">
+                    Participe da conversa! Veja o que nossa comunidade está compartilhando sobre segurança online, bem-estar mental e cidadania digital.
+                </p>
+            </section>
+
+            <!-- Grade com todas as postagens -->
+            <div class="grade-postagens">
+
+                <!-- Exemplo de Postagem 1 -->
+                <article class="cartao-postagem">
+                    <header class="cabecalho-postagem">
+                        <div class="autor-postagem">
+                            <span class="icone-rede-social"></span> <!-- Ícone do Instagram/Twitter -->
+                            <span class="nome-autor">@segurancaprimeiro</span>
+                        </div>
+                        <span class="icone-opcoes"></span> <!-- Ícone de três pontos -->
+                    </header>
+                    <div class="midia-postagem">
+                        <img src="imagen/photo-1565688695721-2b6f5a880a15.jpeg" alt="Imagem da postagem sobre senhas seguras">
+                    </div>
+                    <div class="conteudo-postagem">
+                        <p>
+                            Novo artigo: 10 dicas para criar senhas fortes que você realmente consegue lembrar! Link na bio. #ConecxaSegura
+                        </p>
+                    </div>
+                    <footer class="rodape-postagem">
+                        <div class="interacoes">
+                            <span class="icone-interacao icone-curtida"></span>
+                            <span>234</span>
+                            <span class="icone-interacao icone-comentario"></span>
+                            <span>56</span>
+                        </div>
+                        <span class="icone-interacao icone-compartilhar"></span>
+                    </footer>
+                </article>
+
+                <!-- Exemplo de Postagem 2 -->
+                <article class="cartao-postagem">
+                    <header class="cabecalho-postagem">
+                        <div class="autor-postagem">
+                            <span class="icone-rede-social"></span>
+                            <span class="nome-autor">@techeducator</span>
+                        </div>
+                        <span class="icone-opcoes"></span>
+                    </header>
+                    <div class="midia-postagem">
+                        <img src="imagen/photo-1603985529862-9e12198c9a60.jpeg" alt="Imagem de um celular com VPN">
+                    </div>
+                    <div class="conteudo-postagem">
+                        <p>
+                            Você sabia? A autenticação de dois fatores reduz o risco de invasão de contas em 99%! Ative hoje mesmo. 👍 #ConecxaSegura
+                        </p>
+                    </div>
+                    <footer class="rodape-postagem">
+                        <div class="interacoes">
+                            <span class="icone-interacao icone-curtida"></span>
+                            <span>445</span>
+                            <span class="icone-interacao icone-comentario"></span>
+                            <span>67</span>
+                        </div>
+                        <span class="icone-interacao icone-compartilhar"></span>
+                    </footer>
+                </article>
+
+                <!-- Exemplo de Postagem 3 (sem imagem pós é do Threads ) -->
+                <article class="cartao-postagem">
+                    <header class="cabecalho-postagem">
+                        <div class="autor-postagem">
+                            <span class="icone-rede-social"></span>
+                            <span class="nome-autor">@rh_consciente</span>
+                        </div>
+                        <span class="icone-opcoes"></span>
+                    </header>
+                    <div class="conteudo-postagem">
+                        <p>
+                            Lembre-se: suas informações pessoais são valiosas. Pense bem antes de compartilhar. #ConecxaSegura
+                        </p>
+                    </div>
+                    <footer class="rodape-postagem">
+                        <div class="interacoes">
+                            <span class="icone-interacao icone-curtida"></span>
+                            <span>342</span>
+                            <span class="icone-interacao icone-comentario"></span>
+                            <span>28</span>
+                        </div>
+                        <span class="icone-interacao icone-compartilhar"></span>
+                    </footer>
+                </article>
+
+                <!-- Adicione mais 3 postagens para preencher a grade -->
+                <!-- Exemplo de Postagem 4 -->
+                <article class="cartao-postagem">
+                    <header class="cabecalho-postagem">
+                        <div class="autor-postagem">
+                            <span class="icone-rede-social"></span>
+                            <span class="nome-autor">@bemestar_digital</span>
+                        </div>
+                        <span class="icone-opcoes"></span>
+                    </header>
+                    <div class="conteudo-postagem">
+                        <p>
+                            Fazendo um detox digital neste fim de semana! Lembre-se de equilibrar o tempo de tela com conexões do mundo real. 🌳 #ConecxaSegura
+                        </p>
+                    </div>
+                    <footer class="rodape-postagem">
+                        <div class="interacoes">
+                            <span class="icone-interacao icone-curtida"></span>
+                            <span>521</span>
+                            <span class="icone-interacao icone-comentario"></span>
+                            <span>45</span>
+                        </div>
+                        <span class="icone-interacao icone-compartilhar"></span>
+                    </footer>
+                </article>
+
+                <!-- Exemplo de Postagem 5 -->
+                <article class="cartao-postagem">
+                    <header class="cabecalho-postagem">
+                        <div class="autor-postagem">
+                            <span class="icone-rede-social"></span>
+                            <span class="nome-autor">@youthsafety</span>
+                        </div>
+                        <span class="icone-opcoes"></span>
+                    </header>
+                    <div class="midia-postagem">
+                        <img src="imagen/photo-1760262167041-fa38a43c4d0e.jpeg" alt="Duas pessoas conversando">
+                    </div>
+                    <div class="conteudo-postagem">
+                        <p>
+                            Sua saúde mental importa! Se as redes sociais estão te afetando negativamente, não há problema em dar uma pausa. 💚 #ConecxaSegura
+                        </p>
+                    </div>
+                    <footer class="rodape-postagem">
+                        <div class="interacoes">
+                            <span class="icone-interacao icone-curtida"></span>
+                            <span>823</span>
+                            <span class="icone-interacao icone-comentario"></span>
+                            <span>134</span>
+                        </div>
+                        <span class="icone-interacao icone-compartilhar"></span>
+                    </footer>
+                </article>
+
+                <!-- Exemplo de Postagem 6 -->
+                <article class="cartao-postagem">
+                    <header class="cabecalho-postagem">
+                        <div class="autor-postagem">
+                            <span class="icone-rede-social"></span>
+                            <span class="nome-autor">@cyberhero</span>
+                        </div>
+                        <span class="icone-opcoes"></span>
+                    </header>
+                    <div class="conteudo-postagem">
+                        <p>
+                            Viu cyberbullying? Não seja um espectador - seja um defensor! Denuncie e apoie. #ConecxaSegura
+                        </p>
+                    </div>
+                    <footer class="rodape-postagem">
+                        <div class="interacoes">
+                            <span class="icone-interacao icone-curtida"></span>
+                            <span>689</span>
+                            <span class="icone-interacao icone-comentario"></span>
+                            <span>92</span>
+                        </div>
+                        <span class="icone-interacao icone-compartilhar"></span>
+                    </footer>
+                </article>
+
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="rodape-site">
+        <div class="conteudo-central">
+            <p class="direitos-autorais">&copy; 2025 CONECXÃO SEGURA. Todos os direitos reservados.</p>
+            <nav class="navegacao-rodape">
+                <ul>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>

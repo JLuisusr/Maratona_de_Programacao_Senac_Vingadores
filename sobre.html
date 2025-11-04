@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nós - CONECXÃO SEGURA</title>
+    <link rel="shortcut icon" href="logo.svg" type="image/svg">
     <link rel="stylesheet" href="sobre.css"> 
 </head>
 <body>
@@ -15,18 +16,43 @@
                 </svg>
                 <span class="logo-texto">CONECXÃO SEGURA</span>
             </div>
-            <nav class="navegacao-principal">
-                <ul>
-                    <li><a href="conexão.html">Home</a></li>
-                    <li><a href="quiz.html">Quiz</a></li>
-                    <li><a href="index.html">Feed Social</a></li>
-                    <li><a href="#">Educação</a></li>
-                    <li><a href="m-formulario">Reportar</a></li>
-                    <li><a href="#" class="ativo">Sobre Nós</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+
+            <div class="navegacao-e-perfil">
+                <nav class="navegacao-principal">
+                    <ul>
+                        <li><a href="conexão.html">Home</a></li> <!--Sim colocaram acento (~) não é minha cupa professor-->
+                        <li><a href="quiz.html">Quiz</a></li>
+                        <li><a href="feed.html">Feed Social</a></li>
+                        <li><a href="index.html">Educação</a></li>
+                        <li><a href="m-formulario.html">Reportar</a></li>
+                        <li><a href="sobre.html" class="ativo">Sobre Nós</a></li>
+                    </ul>
+                </nav>
+
+                <div class="container-perfil">
+                    <img src="imagen/professor.jpeg" alt="Abrir menu do perfil" class="avatar-cabecalho">
+                    
+                    <div class="menu-suspenso-perfil">
+                        <div class="cabecalho-menu">
+                            <img src="imagen/professor.jpeg" alt="Foto de perfil do usuário" class="avatar-menu">
+                            <div class="info-usuario">
+                                <strong>Nome do Usuário</strong>
+                                <span>usuario@gmail.com</span>
+                            </div>
+                        </div>
+                        <hr class="divisor-menu">
+                        <ul>
+                            <li><a href="#">Meu Perfil</a></li>
+                            <li><a href="#">Minhas Postagens</a></li>
+                            <li><a href="#">Meus Comentários</a></li>
+                            <li><a href="#">Configurações</a></li>
+                            <li><a href="#" class="link-sair">Sair</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div> <!-- FIM de .navegacao-e-perfil -->
+        </div> <!-- FIM de .conteudo-central -->
+    </header> <!-- FIM de .cabecalho-site, SÉ NÃO MANTER ESSA HIERARQUIA VAI POR MIM FICA TUDO QUEBRADO-->
 
     <!-- CONTEÚDO PRINCIPAL DA PÁGINA -->
     <main class="pagina-sobre">
@@ -95,17 +121,6 @@
             </div>
         </section>
 
-        <!-- Seção da Equipe -->
-        <section class="secao-equipe">
-            <div class="conteudo-central">
-                <h2 class="titulo-secao">Nossa Equipe de GRANDES Desenvolvedores Web</h2>
-                <div class="container-foto-equipe">
-                    <img src="imagen/WhatsApp Image 2025-11-03 at 17.14.43.jpeg" alt="Foto da equipe de desenvolvimento da Conecxão Segura">
-                    <p class="legenda-equipe">Apaixonados por tecnologia e segurança, nossa equipe trabalha unida para criar um ambiente digital mais seguro e acolhedor para todos.</p>
-                </div>
-            </div>
-        </section>
-
         <!-- Seção "O Que Oferecemos" -->
         <section class="secao-ofertas cartao-conteudo">
             <div class="conteudo-central">
@@ -125,6 +140,17 @@
                 <div class="item-oferta">
                     <h3>Apoio da Comunidade</h3>
                     <p>Conecte-se com outras pessoas que compartilham seu compromisso com a segurança através do nosso feed comunitário e discussões.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção da Equipe -->
+        <section class="secao-equipe">
+            <div class="conteudo-central">
+                <h2 class="titulo-secao">Nossa Equipe de Desenvolvedores Web</h2>
+                <div class="container-foto-equipe">
+                    <img src="imagen/equipe_vigadores.jpg" alt="Foto da equipe de desenvolvimento da Conecxão Segura">
+                    <p class="legenda-equipe">Apaixonados por tecnologia e segurança, nossa equipe trabalha unida para criar um ambiente digital mais seguro e acolhedor para todos.</p>
                 </div>
             </div>
         </section>
