@@ -1,0 +1,240 @@
+.main_quiz {
+    background-color: #F8F9FA;
+    margin: 0;
+    padding: 0;
+    height: 69.5vh;
+    overflow-y: hidden;
+}
+
+/*  Seção de barra de progresso do quiz */
+
+.main_quiz {
+    max-width: 45%;
+    margin: 3% auto;
+    padding: 20px;
+}
+
+
+.paginas{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.progresso{
+    color: rgb(41, 89, 143);
+}
+
+.acertos{
+    color: rgb(92, 92, 92)
+}
+
+.progress_bar_fill {
+    height: 10px;
+    border-radius: 30px;
+    background-color: #e9fcff;
+    width: 100%;
+    transition: width 0.3s;
+    margin-bottom: 20px;
+}
+
+.progress_bar_active {
+    height: 10px;
+    background-color: #4c8baf;
+    border-radius: 30px;
+}
+
+/* fim da seção de barra de progresso do quiz */
+
+/*  inicio do bloco do quiz */
+
+.quiz_container {
+    display: grid;
+    background-color: #fff;
+    padding: 20px;
+    gap: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.pergunta p{
+    margin: 0;
+}
+
+.pergunta {
+    font-size: 1.5em;
+    margin: 8px 6px 25px;
+}
+
+.questoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.quest{
+    display: flex;
+    align-items: center;
+    padding: 5px 20px ;
+    background: white;
+    border: 2px solid #d8d8d8;
+    border-radius: 8px;
+    text-decoration: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.quest:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.quest:hover {
+    background-color: #f0f8ff;
+    border-color: #4c8baf;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    transform: scale(1.02);
+}
+
+.quest:disabled:hover {
+    background-color: white;
+    border-color: #d8d8d8;
+}
+
+.quest.selected{
+    border-color: #af4c4c;
+    background: #f7e6e6;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.quest.correta.selected {
+    border-color: #4caf4c;
+    background: #e7f7e6;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.letra{
+    font-size: 18px;
+    color: #000000;
+    margin-right: 15px;
+    background: #e0e6e9;
+    border-radius: 100px;
+    padding: 4px 10px 5px;
+}
+
+.letra.v{
+    color: #ffffff;
+    background: #00bd00;    
+}
+
+
+.explicacao{
+    display: flex;
+    background-color: #e6f7e6;
+    border: 2px solid #4caf4c;
+    align-items: center;
+    padding: 5px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: 18px;
+    color: rgb(26, 65, 0);
+}
+
+.explicacao.hidden{
+    display: none !important;
+}
+
+.explicacao.errada{
+    background-color: #f7e6e6;
+    border: 2px solid #af4c4c;
+    color: rgb(65, 0, 0);
+}
+
+.explicacao.errada .letra{
+    background: #af4c4c;
+    color: #ffffff;
+    border-color: #fff;
+}
+
+.navegaçao{
+    display: flex;
+    justify-content: space-between;
+}
+
+.botao_nav{
+    padding: 10px 20px;
+    background-color: #4c8baf;
+    color: white;
+    font-weight: 550;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.botao_nav:hover {
+    background-color: #5ba5c5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/*  COR DA BOLINHA (letra) QUANDO A RESPOSTA É ERRADA */
+.quest.selected .letra {
+    background: #f7e6e6; 
+    color: #af4c4c; 
+    border: 2px solid #af4c4c;
+    transition: all 0.2s ease;
+}
+
+/*  COR DA BOLINHA (letra) QUANDO A RESPOSTA É CERTA */
+.quest.correta.selected .letra {
+    background: #00bd00;
+    color: #fff;         
+    border: 2px solid #00bd00;
+    transition: all 0.2s ease;
+}
+
+
+@media screen and (max-width: 900px) {
+    .main_quiz {
+        max-width: 70%;
+        margin: 3% auto;
+        padding: 10px;
+    }
+
+    .pergunta {
+        font-size: 1.2em;}
+
+    .quest{
+        font-size: 0.9em;
+        text-align: left;
+    }
+}
+
+
+@media screen and (max-width: 1100px) {
+    .main_quiz {
+        max-width: 50%;
+        margin: 3% auto;
+        padding: 10px;
+    }
+
+    .pergunta {
+        font-size: 1.3em;}
+
+    .quest{
+        font-size: 1.1em;
+        text-align: left;
+    }
+}

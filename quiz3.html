@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="quiz.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="estilo_geral.css">
+</head>
+<body>
+    <header class="cabecalho-site">
+        <div class="conteudo-central">
+            
+            <!-- Logo do Site -->
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                </svg>
+                <span class="logo-texto">CONECXÃO SEGURA</span>
+            </div>
+
+            <!-- Container para Navegação e Perfil -->
+            <div class="navegacao-e-perfil">
+                
+                <!-- Navegação Principal -->
+                <nav class="navegacao-principal">
+                    <ul>
+                        <!-- Lembre-se de mover a classe "ativo" para o link da página atual -->
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="quiz.html">Quiz</a></li>
+                        <li><a href="feed.html">Feed Social</a></li>
+                        <li><a href="educacao.html">Educação</a></li>
+                        <li><a href="reportar.html">Reportar</a></li>
+                        <li><a href="sobre.html" class="ativo">Sobre Nós</a></li> 
+                    </ul>
+                </nav>
+
+                <!-- Menu de Perfil do Usuário -->
+                <div class="container-perfil">
+                    <img src="imagen/professor.jpeg" alt="Abrir menu do perfil" class="avatar-cabecalho">
+                    
+                    <div class="menu-suspenso-perfil">
+                        <div class="cabecalho-menu">
+                            <img src="imagen/professor.jpeg" alt="Foto de perfil do usuário" class="avatar-menu">
+                            <div class="info-usuario">
+                                <strong>Nome do Usuário</strong>
+                                <span>usuario@gmail.com</span>
+                            </div>
+                        </div>
+                        <hr class="divisor-menu">
+                        <ul>
+                            <li><a href="#">Meu Perfil</a></li>
+                            <li><a href="#">Minhas Postagens</a></li>
+                            <li><a href="#">Meus Comentários</a></li>
+                            <li><a href="#">Configurações</a></li>
+                            <li><a href="#" class="link-sair">Sair</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div> <!-- Fim de .navegacao-e-perfil -->
+        </div> <!-- Fim de .conteudo-central -->
+        </header>
+    <main class="main_quiz">
+        
+
+        <div class="progress_bar">
+            <div class ="paginas">
+                <span class="progresso">Página 4 de 5</span>
+            </div>
+            <div class="progress_bar_fill">
+                <div class="progress_bar_active" style="width: 80%;"></div>
+            </div>
+        </div>
+
+
+        <div class="quiz_container">
+            <p class="pergunta">Se um e-mail disser “clique aqui para confirmar seus dados bancários”, o que você faz?</p>
+             
+             <div class="questoes">
+                <button class="quest">
+                    <h3 class="letra">A</h3>
+                    <span>Responder o e-mail</span>
+                </button>
+                
+                <button class="quest">
+                    <h3 class="letra">B</h3>
+                    <span>Clicar no link</span>
+                </button>
+
+                <button class="quest correta">
+                    <h3 class="letra certa">C</h3>
+                    <span>Acessar site oficial</span>
+                </button>
+            </div>
+
+            <button class="explicacao hidden">
+                    <h3 class="letra v">V</h3>
+                    <span class="texto-explicacao">👉 Evita golpes de phishing.</span>
+            </button>
+
+        <div class="navegaçao">
+            <a href="quiz2.html"><button class="botao_nav">Voltar</button></a>
+            <a href="quiz4.html"><button class="botao_nav">Próximo</button></a>
+        </div>
+
+
+    </main>
+        <!-- =================================================================
+    RODAPÉ PADRÃO DO SITE
+    Copie este bloco para o final de todas as suas páginas.
+    ================================================================== -->
+    <footer class="rodape-site">
+        <div class="conteudo-central">
+            <p class="direitos-autorais">&copy; 2025 CONECXÃO SEGURA. Todos os direitos reservados.</p>
+            <nav class="navegacao-rodape">
+                <ul>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>      
+        </div>
+    </footer>
+    <!-- FIM DO RODAPÉ -->
+
+    <script>
+        // seleciona todas as opções e a explicação
+        const opcoes = document.querySelectorAll('.quest');
+        const explicacao = document.querySelector('.explicacao');
+
+        opcoes.forEach(op => {
+            op.addEventListener('click', () => {
+                const correta = op.querySelector('.letra.certa') !== null;
+
+                // mostra/oculta explicação apenas quando a resposta correta for clicada
+                if (correta) {
+                    explicacao.classList.remove('hidden');
+                } else {
+                    explicacao.classList.add('hidden');
+                }
+
+                // desabilita todas as outras opções (mantém a clicada habilitada apenas visualmente)
+                opcoes.forEach(other => {
+                    if (other !== op) {
+                        other.disabled = true;
+                    } else {
+                        // opcional: marca a selecionada
+                        other.classList.add('selected');
+                    }
+                });
+            }, { once: true }); // evita múltiplos cliques na mesma opção
+        });
+    </script>
+</body>
+</html>

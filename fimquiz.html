@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="fimquiz.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado do Quiz</title>
+    <link rel="stylesheet" href="estilo_geral.css">
+</head>
+<body>
+    <header class="cabecalho-site">
+        <div class="conteudo-central">
+            
+            <!-- Logo do Site -->
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                </svg>
+                <span class="logo-texto">CONECXÃO SEGURA</span>
+            </div>
+
+            <!-- Container para Navegação e Perfil -->
+            <div class="navegacao-e-perfil">
+                
+                <!-- Navegação Principal -->
+                <nav class="navegacao-principal">
+                    <ul>
+                        <!-- Lembre-se de mover a classe "ativo" para o link da página atual -->
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="quiz.html">Quiz</a></li>
+                        <li><a href="feed.html">Feed Social</a></li>
+                        <li><a href="educacao.html">Educação</a></li>
+                        <li><a href="reportar.html">Reportar</a></li>
+                        <li><a href="sobre.html" class="ativo">Sobre Nós</a></li> 
+                    </ul>
+                </nav>
+
+                <!-- Menu de Perfil do Usuário -->
+                <div class="container-perfil">
+                    <img src="imagen/professor.jpeg" alt="Abrir menu do perfil" class="avatar-cabecalho">
+                    
+                    <div class="menu-suspenso-perfil">
+                        <div class="cabecalho-menu">
+                            <img src="imagen/professor.jpeg" alt="Foto de perfil do usuário" class="avatar-menu">
+                            <div class="info-usuario">
+                                <strong>Nome do Usuário</strong>
+                                <span>usuario@gmail.com</span>
+                            </div>
+                        </div>
+                        <hr class="divisor-menu">
+                        <ul>
+                            <li><a href="#">Meu Perfil</a></li>
+                            <li><a href="#">Minhas Postagens</a></li>
+                            <li><a href="#">Meus Comentários</a></li>
+                            <li><a href="#">Configurações</a></li>
+                            <li><a href="#" class="link-sair">Sair</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div> <!-- Fim de .navegacao-e-perfil -->
+        </div> <!-- Fim de .conteudo-central -->
+        </header>
+    <main class="main_fimquiz">
+        <h2 class="titulo_fimquiz">Parabéns por completar o quiz!</h2>
+        
+        
+
+        <p class="texto_fimquiz">Você agora sabe mais sobre segurança digital. Continue praticando bons hábitos online para se manter seguro!</p>
+
+        <a href="quiz.html"><button class="botao_reiniciar">Reiniciar Quiz</button></a>
+        <a href=""><button class="botao_reiniciar">Voltar para home</button></a>
+    </main>
+
+</body>
+</html>

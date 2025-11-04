@@ -1,0 +1,289 @@
+/* =================================================================
+   ARQUIVO: estilo-geral.css
+   - ESTE É O ARQUIVO CSS PADRÃO PARA TODO O SITE "CONECXÃO SEGURA".
+   - Contém estilos globais, variáveis, cabeçalho e rodapé.
+   ================================================================= */
+
+/* --- Importação da Fonte --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap'  );
+
+/* --- Variáveis de Cores (Paleta do Site) --- */
+:root {
+    --cor-azul-principal: #3A7CA5;
+    --cor-texto-escuro: #212529;
+    --cor-texto-claro: #5a6168;
+    --cor-fundo-pagina: #F8F9FA;
+    --cor-fundo-cartao: #FFFFFF;
+    --cor-borda: #E9ECEF;
+    --cor-sucesso: #81C784; /* Verde para ícones de sucesso/valores */
+    --cor-perigo: #E57373;  /* Vermelho para links de "Sair" */
+    --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Reset e Estilos Globais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--cor-fundo-pagina);
+    color: var(--cor-texto-escuro);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+    line-height: 1.3;
+    font-weight: 700;
+    color: var(--cor-azul-principal);
+}
+
+p {
+    color: var(--cor-texto-claro);
+    margin-bottom: 16px;
+}
+
+a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--cor-azul-principal);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* --- Layout Principal --- */
+.conteudo-central {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* =================================================================
+   CABEÇALHO FIXO
+   ================================================================= */
+.cabecalho-site {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--cor-fundo-cartao);
+    border-bottom: 1px solid var(--cor-borda);
+    box-shadow: var(--sombra-suave);
+}
+
+.cabecalho-site .conteudo-central {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    height: 85px; /* Altura fixa para o cabeçalho */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--cor-azul-principal);
+}
+
+.logo-texto {
+    font-weight: 700;
+    font-size: 19px;
+    color: var(--cor-azul-principal);
+}
+
+.navegacao-principal ul {
+    display: flex;
+    gap: 24px;
+}
+
+.navegacao-principal a {
+    font-weight: 600;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.navegacao-principal a.ativo,
+.navegacao-principal a:hover {
+    color: var(--cor-texto-escuro);
+    border-bottom-color: var(--cor-azul-principal);
+}
+
+/* =================================================================
+   MENU DE PERFIL DO USUÁRIO
+   ================================================================= */
+.navegacao-e-perfil {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.container-perfil {
+    position: relative;
+}
+
+.avatar-cabecalho {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--cor-borda);
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.menu-suspenso-perfil {
+    visibility: hidden; 
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    margin-top: 12px;
+    right: 0;
+    width: 250px;
+    background-color: var(--cor-fundo-cartao);
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+    box-shadow: var(--sombra-suave);
+    z-index: 100;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+.container-perfil:hover .menu-suspenso-perfil {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container-perfil:hover .avatar-cabecalho {
+    border-color: var(--cor-azul-principal);
+}
+
+.cabecalho-menu {
+    padding: 0;
+}
+
+.avatar-menu {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.info-usuario {
+    padding: 16px;
+}
+
+.info-usuario strong {
+    display: block;
+    color: var(--cor-texto-escuro);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.info-usuario span {
+    font-size: 14px;
+    color: var(--cor-texto-claro);
+}
+
+.divisor-menu {
+    border: none;
+    border-top: 1px solid var(--cor-borda);
+    margin: 0;
+}
+
+.menu-suspenso-perfil ul {
+    padding: 8px 0;
+}
+
+.menu-suspenso-perfil li a {
+    display: block;
+    padding: 10px 20px;
+    color: var(--cor-texto-claro);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.menu-suspenso-perfil li a:hover {
+    background-color: var(--cor-fundo-pagina);
+    color: var(--cor-azul-principal);
+}
+
+.link-sair {
+    color: var(--cor-perigo) !important;
+}
+
+/* =================================================================
+   RODAPÉ DO SITE
+   ================================================================= */
+.rodape-site {
+    background-color: var(--cor-fundo-cartao);
+    border-top: 1px solid var(--cor-borda);
+    padding: 24px 0;
+    margin-top: 32px;
+}
+
+.rodape-site .conteudo-central {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.direitos-autorais {
+    color: var(--cor-texto-claro);
+    font-size: 14px;
+    margin: 0;
+}
+
+.navegacao-rodape ul {
+    display: flex;
+    gap: 16px;
+}
+
+.navegacao-rodape a {
+    font-size: 14px;
+}
+
+/* =================================================================
+   ESTILOS RESPONSIVOS GERAIS
+   ================================================================= */
+@media (max-width: 768px) {
+    .cabecalho-site .conteudo-central,
+    .navegacao-e-perfil {
+        flex-direction: column;
+        gap: 24px;
+        height: auto; /* Altura automática em telas pequenas */
+    }
+
+    .navegacao-principal ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .rodape-site .conteudo-central {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .navegacao-rodape ul {
+        justify-content: center;
+    }
+}
